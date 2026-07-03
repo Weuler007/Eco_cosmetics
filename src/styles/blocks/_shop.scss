@@ -1,0 +1,42 @@
+.shop {
+  padding-top: 20px;
+
+  &__content {
+    display: grid;
+    gap: 36px;
+
+    @include on-tablet {
+      grid-template-columns: 50px 1fr;
+      gap: 46px;
+    }
+  }
+
+  &__head {
+    display: grid;
+    gap: 24px;
+
+    @include on-tablet {
+      grid-column: 2;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 26px;
+
+    @include on-tablet {
+      grid-column: 2;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__button {
+    justify-self: center;
+    width: 280px;
+    min-height: 60px;
+
+    @include on-tablet {
+      grid-column: 2;
+    }
+  }
+}

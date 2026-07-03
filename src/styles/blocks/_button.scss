@@ -1,0 +1,25 @@
+.button {
+  @include hover-lift;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  min-height: 60px;
+  border: 1px solid $color-dark;
+  background-color: $color-dark;
+  color: $color-white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  @include on-tablet {
+    width: 200px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $color-dark;
+  }
+}
