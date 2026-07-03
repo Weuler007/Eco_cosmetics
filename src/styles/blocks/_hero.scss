@@ -65,8 +65,8 @@
   }
 
   &__button {
-    width: 280px;
-    min-height: 60px;
+    width: $button-width;
+    min-height: $button-height;
   }
 
   &__image {

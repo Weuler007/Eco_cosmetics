@@ -2,10 +2,16 @@
   @include hover-lift;
 
   display: grid;
+  flex: 0 0 min(100%, 280px);
   gap: 12px;
+  scroll-snap-align: start;
 
   &--hidden {
     display: none;
+  }
+
+  @include on-tablet {
+    flex-basis: auto;
   }
 
   &__image {
@@ -15,6 +21,11 @@
 
     @include on-tablet {
       height: 370px;
+    }
+
+    @include on-desktop {
+      width: 530px;
+      height: 587px;
     }
   }
 

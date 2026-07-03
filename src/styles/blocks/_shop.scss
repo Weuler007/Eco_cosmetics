@@ -9,6 +9,11 @@
       grid-template-columns: 50px 1fr;
       gap: 46px;
     }
+
+    @include on-desktop {
+      grid-template-columns: 50px 1080px;
+      gap: 46px;
+    }
   }
 
   &__head {
@@ -21,19 +26,29 @@
   }
 
   &__list {
-    display: grid;
+    display: flex;
     gap: 26px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
     @include on-tablet {
+      display: grid;
+      overflow: visible;
       grid-column: 2;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      scroll-snap-type: none;
+    }
+
+    @include on-desktop {
+      grid-template-columns: repeat(2, 530px);
+      gap: 20px;
     }
   }
 
   &__button {
     justify-self: center;
-    width: 280px;
-    min-height: 60px;
+    width: $button-width;
+    min-height: $button-height;
 
     @include on-tablet {
       grid-column: 2;
