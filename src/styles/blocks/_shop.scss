@@ -40,7 +40,7 @@
     }
 
     @include on-desktop {
-      grid-template-columns: repeat(2, 530px);
+      grid-template-columns: repeat(2, 530px );
       gap: 20px;
     }
   }

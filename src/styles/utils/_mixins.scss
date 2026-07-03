@@ -1,15 +1,3 @@
-@mixin on-tablet {
-  @media (min-width: $tablet) {
-    @content;
-  }
-}
-
-@mixin on-desktop {
-  @media (min-width: $desktop) {
-    @content;
-  }
-}
-
 @mixin hover-lift {
   transition:
     transform $duration,
