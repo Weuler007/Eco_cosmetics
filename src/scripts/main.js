@@ -2,8 +2,8 @@
 
 import { initContactForm } from './modules/contact-form.js';
 import { initMenu } from './modules/menu.js';
-import { initShop } from './modules/shop.js';
+import { initShopTabs } from './modules/shop-tabs.js';
 
 initMenu();
-initShop();
+initShopTabs();
 initContactForm();

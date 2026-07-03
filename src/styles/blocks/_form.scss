@@ -1,31 +1,24 @@
 .form {
   display: grid;
-  gap: 22px;
-
-  &__field {
-    display: grid;
-    gap: 8px;
-  }
-
-  &__label {
-    color: $color-muted;
-    font-size: 14px;
-  }
+  gap: 18px;
 
   &__input,
   &__textarea {
     width: 100%;
-    padding: 12px 0;
+    padding: 14px 0;
     border: 0;
     border-bottom: 1px solid $color-line;
     outline: 0;
     background-color: transparent;
-    color: $color-ink;
+    color: $color-text;
     resize: vertical;
-    transition: border-color $duration;
+
+    &::placeholder {
+      color: $color-muted;
+    }
 
     &:focus {
-      border-color: $color-accent;
+      border-color: $color-green;
     }
 
     &:invalid:not(:placeholder-shown) {
@@ -34,6 +27,8 @@
   }
 
   &__button {
-    justify-self: start;
+    width: $button-width;
+    min-height: $button-height;
+    margin-top: 14px;
   }
 }

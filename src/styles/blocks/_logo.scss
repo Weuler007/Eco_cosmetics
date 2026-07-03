@@ -2,15 +2,18 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-weight: 700;
+  color: $color-green;
+  font-size: 12px;
   text-transform: uppercase;
 
   &__mark {
-    width: 28px;
-    height: 28px;
-    border: 2px solid $color-accent;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('/src/images/Group 8-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__text {
@@ -18,8 +21,6 @@
 
     @include on-tablet {
       display: inline;
-      font-size: 14px;
-      letter-spacing: 0;
     }
   }
 }

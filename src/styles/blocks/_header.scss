@@ -2,15 +2,18 @@
   position: sticky;
   z-index: 10;
   top: 0;
-  padding-block: 18px;
-  background-color: rgba($color-page, 0.94);
-  backdrop-filter: blur(10px);
+  padding-top: 40px;
+  background-color: rgba($color-bg, 0.96);
+
+  @include on-tablet {
+    padding-top: 28px;
+  }
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    min-height: 50px;
   }
 
   &__menu-button {
@@ -18,7 +21,7 @@
     gap: 6px;
     width: 36px;
     height: 36px;
-    padding: 9px 6px;
+    padding: 10px 7px;
     border: 0;
     background-color: transparent;
 
@@ -29,14 +32,12 @@
 
   &__menu-line {
     height: 2px;
-    background-color: $color-accent;
+    background-color: $color-green;
   }
 
   &__nav {
-    position: absolute;
-    top: 72px;
-    right: 20px;
-    left: 20px;
+    position: fixed;
+    inset: 0;
     display: none;
 
     &--open {
@@ -53,7 +54,7 @@
     display: none;
 
     @include on-tablet {
-      display: inline-grid;
+      display: grid;
     }
   }
 }

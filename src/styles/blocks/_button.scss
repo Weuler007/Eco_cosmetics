@@ -1,24 +1,21 @@
 .button {
+  @include hover-lift;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 176px;
-  min-height: 54px;
-  padding: 14px 28px;
-  border: 1px solid $color-ink;
-  background-color: $color-ink;
+  width: $button-width;
+  min-height: $button-height;
+  border: 1px solid $color-dark;
+  background-color: $color-dark;
   color: $color-white;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  transition:
-    background-color $duration,
-    color $duration,
-    transform $duration;
 
   &:hover {
     background-color: transparent;
-    color: $color-ink;
-    transform: translateY(-2px);
+    color: $color-dark;
   }
 }

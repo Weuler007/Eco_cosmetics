@@ -1,58 +1,57 @@
 .powder {
   &__content {
     display: grid;
-    gap: 30px;
+    gap: 36px;
 
     @include on-tablet {
-      grid-template-columns: 1fr 1.2fr;
-      align-items: center;
+      grid-template-columns: 50px 0.7fr 1.3fr;
+      align-items: start;
+      gap: 46px;
     }
   }
 
-  &__text {
+  &__copy {
     display: grid;
-    gap: 18px;
+    gap: 120px;
   }
 
-  &__details {
+  &__scheme {
     display: grid;
-    gap: 24px;
-
-    @include on-tablet {
-      grid-template-columns: 0.9fr 1fr;
-      align-items: center;
-    }
+    grid-template-columns: minmax(110px, 0.7fr) minmax(180px, 1fr);
+    align-items: start;
+    gap: 16px;
   }
 
   &__list {
     display: grid;
-    gap: 16px;
-    margin: 0;
-    padding: 28px;
-    border: 1px solid $color-line;
+    gap: 28px;
+    margin: 20px 0 0;
+    padding: 0;
     list-style: none;
   }
 
   &__item {
     position: relative;
-    padding-left: 34px;
-    color: $color-muted;
+    padding-right: 52px;
+    font-size: 12px;
+    text-align: right;
 
-    &::before {
+    &::after {
       content: '';
       position: absolute;
       top: 50%;
-      left: 0;
-      width: 22px;
+      right: 0;
+      width: 40px;
       height: 1px;
-      background-color: $color-accent;
+      background-color: $color-green;
     }
   }
 
-  &__image {
-    min-height: 320px;
-    background-image: url('../images/Снимок экрана 2019-09-04 в 19.31.png');
-    background-position: center;
-    background-size: cover;
+  &__jar {
+    height: 260px;
+    background-image: url('/src/images/Frame 19.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

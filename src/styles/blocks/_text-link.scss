@@ -1,10 +1,10 @@
 .text-link {
-  display: inline-flex;
+  display: inline-block;
   width: max-content;
-  padding-bottom: 8px;
-  border-bottom: 1px solid $color-accent;
-  color: $color-accent;
-  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-green;
+  color: $color-green;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   transition:
@@ -12,7 +12,7 @@
     border-color $duration;
 
   &:hover {
-    color: $color-ink;
-    border-color: $color-ink;
+    border-color: $color-dark;
+    color: $color-dark;
   }
 }
