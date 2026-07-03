@@ -1,0 +1,18 @@
+.text-link {
+  display: inline-flex;
+  width: max-content;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color-accent;
+  color: $color-accent;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    color $duration,
+    border-color $duration;
+
+  &:hover {
+    color: $color-ink;
+    border-color: $color-ink;
+  }
+}

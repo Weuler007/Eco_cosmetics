@@ -1,0 +1,39 @@
+.form {
+  display: grid;
+  gap: 22px;
+
+  &__field {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__label {
+    color: $color-muted;
+    font-size: 14px;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 1px solid $color-line;
+    outline: 0;
+    background-color: transparent;
+    color: $color-ink;
+    resize: vertical;
+    transition: border-color $duration;
+
+    &:focus {
+      border-color: $color-accent;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: #b54838;
+    }
+  }
+
+  &__button {
+    justify-self: start;
+  }
+}

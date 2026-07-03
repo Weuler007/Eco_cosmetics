@@ -1,0 +1,43 @@
+.shop {
+  &__content {
+    display: grid;
+    gap: 28px;
+  }
+
+  &__heading {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__slider {
+    display: grid;
+    gap: 22px;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 28px;
+    transition: transform $duration;
+
+    @media (max-width: 899px) {
+      display: flex;
+    }
+  }
+
+  &__card {
+    @media (max-width: 899px) {
+      flex: 0 0 78%;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 18px;
+  }
+
+  &__button {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,29 @@
+.intro {
+  &__content {
+    display: grid;
+    gap: 28px;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-accent;
+    font-size: 20px;
+    line-height: 1.5;
+
+    @include on-tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    color: $color-muted;
+    line-height: 1.6;
+  }
+}

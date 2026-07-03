@@ -1,0 +1,22 @@
+.contact {
+  &__content {
+    display: grid;
+    gap: 30px;
+
+    @include on-tablet {
+      grid-template-columns: 0.8fr 1fr;
+    }
+  }
+
+  &__text {
+    display: grid;
+    align-content: start;
+    gap: 18px;
+  }
+
+  &__paragraph {
+    margin: 0;
+    color: $color-muted;
+    line-height: 1.6;
+  }
+}

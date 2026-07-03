@@ -1,0 +1,58 @@
+.powder {
+  &__content {
+    display: grid;
+    gap: 30px;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 18px;
+  }
+
+  &__details {
+    display: grid;
+    gap: 24px;
+
+    @include on-tablet {
+      grid-template-columns: 0.9fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 28px;
+    border: 1px solid $color-line;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 34px;
+    color: $color-muted;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 22px;
+      height: 1px;
+      background-color: $color-accent;
+    }
+  }
+
+  &__image {
+    min-height: 320px;
+    background-image: url('../images/Снимок экрана 2019-09-04 в 19.31.png');
+    background-position: center;
+    background-size: cover;
+  }
+}

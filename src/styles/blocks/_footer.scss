@@ -1,0 +1,56 @@
+.footer {
+  background-color: $color-soft-green;
+
+  &__content {
+    display: grid;
+    gap: 28px;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    @include on-desktop {
+      grid-template-columns: 1fr 1fr auto;
+    }
+  }
+
+  &__nav,
+  &__contacts,
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
+  }
+
+  &__contacts {
+    flex-direction: column;
+  }
+
+  &__link,
+  &__social {
+    transition: color $duration;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__social {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba($color-accent, 0.28);
+    font-weight: 700;
+  }
+
+  &__copyright {
+    margin: 0;
+    color: $color-muted;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+  }
+}

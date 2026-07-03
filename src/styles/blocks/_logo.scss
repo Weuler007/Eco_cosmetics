@@ -1,0 +1,25 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__mark {
+    width: 28px;
+    height: 28px;
+    border: 2px solid $color-accent;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+  }
+
+  &__text {
+    display: none;
+
+    @include on-tablet {
+      display: inline;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.page {
+  min-width: 320px;
+
+  &__body {
+    overflow-x: hidden;
+  }
+
+  &__section {
+    padding-block: 44px;
+
+    @include on-tablet {
+      padding-block: 70px;
+    }
+
+    @include on-desktop {
+      padding-block: 100px;
+    }
+  }
+}

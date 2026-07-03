@@ -1,19 +1,299 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+    <meta
+      name="description"
+      content="Eco cosmetics landing page with natural care products and handmade candles."
+    />
+    <title>Eco Cosmetics</title>
+    <link
+      rel="icon"
+      href="src/images/favicon.svg"
+      type="image/svg+xml"
+    />
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script src="src/scripts/main.js"></script>
+  <body class="page__body">
+    <header class="header page__section" id="home">
+      <div class="container header__content">
+        <a class="logo header__logo" href="#home" aria-label="Eco cosmetics home">
+          <span class="logo__mark"></span>
+          <span class="logo__text">Eco cosmetics</span>
+        </a>
+
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+        </button>
+
+        <nav class="nav header__nav" data-menu>
+          <a class="nav__link" href="#shop">Shop</a>
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#creators">Creators</a>
+          <a class="nav__link" href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart header__cart" type="button" aria-label="Open cart">
+          <span class="cart__icon"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero page__section">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <p class="hero__eyebrow">Handmade natural care</p>
+            <h1 class="hero__title">Brand of eco-cosmetics and magic candles</h1>
+            <p class="hero__price">20% of sales at a wild bird shelter</p>
+            <a class="button hero__button" href="#shop">Shop</a>
+          </div>
+
+          <div class="hero__media" aria-label="Natural cosmetics composition">
+            <div class="hero__image hero__image--large"></div>
+            <div class="hero__image hero__image--small"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro page__section" aria-label="Nature statement">
+        <div class="container intro__content">
+          <p class="intro__text">
+            If you choose the gifts of nature and care about it, scroll down.
+          </p>
+          <p class="intro__description">
+            Biologists say that birds are indicators of the environmental
+            situation, and over the past half century, the population of seabirds
+            has declined by 70%.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-brand page__section" id="about">
+        <div class="container about-brand__content">
+          <p class="section-label about-brand__label">Witch of mountain winds</p>
+
+          <div class="about-brand__text">
+            <h2 class="section-title about-brand__title">About our brand</h2>
+            <p class="about-brand__paragraph">
+              Our brand cosmetics are made from natural ingredients and we are
+              promoting them through small batches, mindful packaging, and care
+              for nature.
+            </p>
+            <p class="about-brand__paragraph">
+              We collect herbs in clean mountain areas and turn them into soaps,
+              oils, powders, and candles for calm daily rituals.
+            </p>
+            <a class="text-link" href="#creators">Learn more</a>
+          </div>
+
+          <div class="about-brand__gallery" aria-label="Brand product gallery">
+            <div class="about-brand__image about-brand__image--wide"></div>
+            <div class="about-brand__image about-brand__image--narrow"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop page__section" id="shop">
+        <div class="container shop__content">
+          <div class="shop__heading">
+            <p class="section-label shop__label">Shop</p>
+            <h2 class="section-title shop__title">Choose your product</h2>
+          </div>
+
+          <div class="tabs shop__tabs" role="tablist" aria-label="Product categories">
+            <button class="tabs__button tabs__button--active" type="button" data-tab="face">
+              Face
+            </button>
+            <button class="tabs__button" type="button" data-tab="body">
+              Body
+            </button>
+            <button class="tabs__button" type="button" data-tab="candles">
+              Candles
+            </button>
+          </div>
+
+          <div class="shop__slider" data-slider>
+            <div class="shop__track" data-slider-track>
+              <article class="product-card shop__card" data-category="face">
+                <div class="product-card__image product-card__image--oil"></div>
+                <h3 class="product-card__title">Hydrophilic oil</h3>
+                <p class="product-card__price">160 UAH</p>
+              </article>
+
+              <article class="product-card shop__card" data-category="face">
+                <div class="product-card__image product-card__image--ubtan"></div>
+                <h3 class="product-card__title">Face ubtan</h3>
+                <p class="product-card__price">180 UAH</p>
+              </article>
+
+              <article class="product-card shop__card" data-category="body">
+                <div class="product-card__image product-card__image--cream"></div>
+                <h3 class="product-card__title">Body cream</h3>
+                <p class="product-card__price">210 UAH</p>
+              </article>
+
+              <article class="product-card shop__card" data-category="candles">
+                <div class="product-card__image product-card__image--candle"></div>
+                <h3 class="product-card__title">Magic candle</h3>
+                <p class="product-card__price">130 UAH</p>
+              </article>
+            </div>
+
+            <div class="shop__controls">
+              <button class="slider-button" type="button" aria-label="Previous product" data-slider-prev>
+                &#8592;
+              </button>
+              <button class="slider-button" type="button" aria-label="Next product" data-slider-next>
+                &#8594;
+              </button>
+            </div>
+          </div>
+
+          <a class="button shop__button" href="#shop">All products</a>
+        </div>
+      </section>
+
+      <section class="creators page__section" id="creators">
+        <div class="container creators__content">
+          <p class="section-label creators__label">About the creators</p>
+          <div class="creators__text">
+            <h2 class="section-title creators__title">Meet our team</h2>
+            <p class="creators__paragraph">
+              Each product is created by people who understand plants, skin
+              needs, and the rhythm of handmade work.
+            </p>
+            <p class="creators__paragraph">
+              We care about the origin of every ingredient and keep production
+              local, small, and transparent.
+            </p>
+            <a class="text-link" href="#contact">Learn more</a>
+            <a class="button creators__button" href="#contact">To contact us</a>
+          </div>
+
+          <div class="creators__image" aria-label="Creators at work"></div>
+        </div>
+      </section>
+
+      <section class="powder page__section">
+        <div class="container powder__content">
+          <div class="powder__text">
+            <p class="section-label powder__label">Ayurvedic Tooth Powder</p>
+            <h2 class="section-title powder__title">Natural care for daily rituals</h2>
+            <a class="text-link" href="#shop">Learn more</a>
+          </div>
+
+          <div class="powder__details">
+            <ul class="powder__list">
+              <li class="powder__item">Kaolin clay</li>
+              <li class="powder__item">Sage</li>
+              <li class="powder__item">Licorice root</li>
+              <li class="powder__item">Calcium carbonate</li>
+              <li class="powder__item">Turmeric</li>
+            </ul>
+
+            <div class="powder__image" aria-label="Ayurvedic tooth powder"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact page__section" id="contact">
+        <div class="container contact__content">
+          <div class="contact__text">
+            <p class="section-label contact__label">Contact us</p>
+            <h2 class="section-title contact__title">We will help you choose</h2>
+            <p class="contact__paragraph">
+              Leave your contacts and we will tell you more about ingredients,
+              care rituals, and available products.
+            </p>
+          </div>
+
+          <form class="form contact__form" data-contact-form>
+            <label class="form__field">
+              <span class="form__label">Name</span>
+              <input class="form__input" type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Email</span>
+              <input class="form__input" type="email" name="email" placeholder="name@example.com" required />
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Phone</span>
+              <input
+                class="form__input"
+                type="tel"
+                name="phone"
+                placeholder="+380 99 123 45 67"
+                pattern="^\+?[0-9\s()-]{7,20}$"
+                required
+              />
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Message</span>
+              <textarea
+                class="form__textarea"
+                name="message"
+                placeholder="Write 2-3 lines about what you need"
+                rows="3"
+                required
+              ></textarea>
+            </label>
+
+            <button class="button form__button" type="submit">Send a message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer page__section">
+      <div class="container footer__content">
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a class="footer__link" href="#shop">Shop</a>
+          <a class="footer__link" href="#about">About</a>
+          <a class="footer__link" href="#creators">Creators</a>
+          <a class="footer__link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__contacts">
+          <a class="footer__link" href="mailto:eco.cosmetics@example.com">eco.cosmetics@example.com</a>
+          <a class="footer__link" href="tel:+380991234567">+380 99 123 45 67</a>
+        </div>
+
+        <div class="footer__socials" aria-label="Social networks">
+          <a class="footer__social" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            In
+          </a>
+          <a class="footer__social" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+            Fb
+          </a>
+          <a class="footer__social" href="https://twitter.com/" target="_blank" rel="noreferrer" aria-label="Twitter">
+            Tw
+          </a>
+        </div>
+
+        <p class="footer__copyright">
+          Copyright 2026 Eco cosmetics
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="src/scripts/main.js"></script>
   </body>
 </html>

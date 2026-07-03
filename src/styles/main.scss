@@ -1,6 +1,25 @@
 @import 'utils';
+@import 'base';
 @import 'typography';
-
-body {
-  background: $c-gray;
-}
+@import 'blocks/page';
+@import 'blocks/container';
+@import 'blocks/logo';
+@import 'blocks/button';
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/cart';
+@import 'blocks/section-label';
+@import 'blocks/section-title';
+@import 'blocks/text-link';
+@import 'blocks/hero';
+@import 'blocks/intro';
+@import 'blocks/about-brand';
+@import 'blocks/tabs';
+@import 'blocks/shop';
+@import 'blocks/product-card';
+@import 'blocks/slider-button';
+@import 'blocks/creators';
+@import 'blocks/powder';
+@import 'blocks/contact';
+@import 'blocks/form';
+@import 'blocks/footer';

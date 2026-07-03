@@ -1,0 +1,59 @@
+.header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding-block: 18px;
+  background-color: rgba($color-page, 0.94);
+  backdrop-filter: blur(10px);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  &__menu-button {
+    display: grid;
+    gap: 6px;
+    width: 36px;
+    height: 36px;
+    padding: 9px 6px;
+    border: 0;
+    background-color: transparent;
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+
+  &__menu-line {
+    height: 2px;
+    background-color: $color-accent;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 72px;
+    right: 20px;
+    left: 20px;
+    display: none;
+
+    &--open {
+      display: flex;
+    }
+
+    @include on-tablet {
+      position: static;
+      display: flex;
+    }
+  }
+
+  &__cart {
+    display: none;
+
+    @include on-tablet {
+      display: inline-grid;
+    }
+  }
+}

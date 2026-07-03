@@ -1,0 +1,48 @@
+.product-card {
+  display: grid;
+  gap: 12px;
+  transition:
+    opacity $duration,
+    transform $duration;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__image {
+    aspect-ratio: 1 / 1.08;
+    background-position: center;
+    background-size: cover;
+
+    &--oil {
+      background-image: url('../images/Group 43.png');
+    }
+
+    &--ubtan {
+      background-image: url('../images/Снимок экрана 2019-09-04 в 19.31.png');
+    }
+
+    &--cream {
+      background-image: url('../images/Снимок экрана 2019-09-04 в 18.07.png');
+    }
+
+    &--candle {
+      background-image: url('../images/Снимок экрана 2019-09-04 в 19.23.png');
+    }
+  }
+
+  &__title,
+  &__price {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: $color-muted;
+  }
+}

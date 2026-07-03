@@ -1,0 +1,32 @@
+.cart {
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: border-color $duration;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  &__icon {
+    position: relative;
+    width: 19px;
+    height: 17px;
+    border: 2px solid $color-ink;
+    border-top: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 3px;
+      width: 9px;
+      height: 9px;
+      border: 2px solid $color-ink;
+      border-bottom: 0;
+      border-radius: 9px 9px 0 0;
+    }
+  }
+}
